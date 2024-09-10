@@ -6,7 +6,7 @@ export default function login() {
   return (
     <View>
       <Text>export default function </Text>
-      <Link href={"/(tabs)/explore"}>login</Link>
+      <Link href={"/(auth)/register"}>login</Link>
     </View>
   )
 }

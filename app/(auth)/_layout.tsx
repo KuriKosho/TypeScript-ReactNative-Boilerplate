@@ -10,14 +10,16 @@ export default function AuthLayout() {
     return (
         <Stack 
             screenOptions={{
+                headerStyle: {
+                    backgroundColor: Colors[colorScheme ?? 'light'].tint,
+                },
+                headerTintColor: Colors[colorScheme ?? 'light'].background,
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
           }}>
             <Stack.Screen name="login" options={{ title: 'Login' }} />
-            <Stack.Screen name="register" options={{
-                 title: 'Register',
-                 headerRight: ()=>(
-                    <Button title="Login" onPress={()=> router.push('/(tabs)/explore')} />
-                )
-                 }}/>
+            <Stack.Screen name="register" options={{title: 'Register' }}/>        
         </Stack>
     )
 }
